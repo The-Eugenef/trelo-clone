@@ -1,16 +1,11 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  OneToMany,
-} from 'typeorm';
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { ColumnEntity } from './column.entity';
 import { CommentEntity } from './comment.entity';
 import { User } from './user.entity';
+import { BaseEntity } from './base.entity';
 
 @Entity()
-export class CardEntity {
+export class CardEntity extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
